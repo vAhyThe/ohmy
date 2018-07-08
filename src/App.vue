@@ -1,7 +1,15 @@
+<style rel="stylesheet/scss" lang="sass">
+  @import '../node_modules/normalize.css/normalize.css'
+  @import './assets/styles/variables'
+  @import './assets/styles/base'
+  @import './assets/styles/grid'
+</style>
+
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <div class="Holder">
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -10,14 +18,3 @@ export default {
   name: 'App'
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

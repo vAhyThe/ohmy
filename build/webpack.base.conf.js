@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const { basename } = require('path');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -52,7 +53,7 @@ module.exports = {
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10000,
@@ -74,6 +75,35 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.svg$/,
+        loader: 'vue-svg-loader', // `vue-svg` for webpack 1.x
+        options: {
+          // optional [svgo](https://github.com/svg/svgo) options
+          svgo: {
+            plugins: [
+              {removeComments: true},
+              {removeTitle: true},
+              {removeEditorsNSData: true},
+              {
+                prefixIds: {
+                  prefix: (node, {path}) => basename(path, '.svg'),
+                  delim: '-',
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    loaders: [
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader', 'resolve-url-loader']
+      }, {
+        test: /\.sass$/,
+        loaders: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
       }
     ]
   },
