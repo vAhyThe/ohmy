@@ -1,0 +1,100 @@
+.Footer
+	position: relative
+	height: 401px
+
+	&__background
+		position: absolute
+		left: 50%
+		top: 50%
+		-webkit-transform: translateY(-50%) translateX(-50%)
+
+.Dinosaurus
+	position: absolute
+	bottom: -205px
+
+	&__holder
+		animation: moveImage 15s linear infinite
+		left: -350px
+
+
+.dino-celist
+	transform-origin: 90px 30px
+	-webkit-animation: rotatecelist 2s infinite
+	animation-direction: alternate
+
+.dino-pravaruka
+	transform-origin: 70px center
+	-webkit-animation: rotatecelist 2s infinite
+	animation-direction: alternate
+
+.dino-levaruka
+	transform-origin: 70px center
+	-webkit-animation: rotatecelist 2s infinite
+	animation-direction: alternate
+
+.dino-levanoha,
+.dino-pravanoha
+	position: relative
+	transform-origin: top center
+	-webkit-animation: legmowing 2s infinite
+	animation-direction: alternate
+.dino-levanoha
+	animation-delay: 1s
+.Haystack
+	position: absolute
+
+	&__shadow
+		position: relative
+		top: 47px
+
+	&__holder
+		animation: moveImage 15s linear infinite
+		left: -350px
+
+	&__ball__holder
+		animation: jumping 2s infinite
+		position: relative
+
+	&__ball
+		position: absolute
+		-webkit-animation: rotate 2s infinite linear
+
+@keyframes rotate
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(360deg)
+
+@keyframes rotatecelist
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(-14deg)
+
+@keyframes jumping
+	0%
+		top: 0
+	50%
+		top: 50px
+	100%
+		top: 0
+
+@keyframes legmowing
+	0%
+		transform: translateY(0px)
+	50%
+		transform: translateY(-15px)
+	100%
+		transform: translateY(0px)
+
+@keyframes jumpinginverse
+	0%
+		top: 50px
+	50%
+		top: 0
+	100%
+		top: 50px
+
+@keyframes moveImage
+	100%
+		transform: translateX(calc(100vw + 350px))

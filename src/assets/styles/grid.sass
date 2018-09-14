@@ -1,3 +1,23 @@
-.Holder
-	width: 1332px
-	margin: 0 auto
+.Grid
+	padding: 0 15px
+	position: relative
+	width: 100%
+
+	&__inner
+		width: 100%
+		margin: 0 auto
+
+		//2
+		@media only screen and (min-width: 677px)
+			width: 677px
+			padding: 0
+	
+
+		//3
+		@media only screen and (min-width: 1032px)
+			width: 1032px
+	
+
+		//4
+		@media only screen and (min-width: 1386px)
+			width: 1386px

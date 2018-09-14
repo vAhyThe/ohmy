@@ -1,0 +1,37 @@
+.Reference
+	&__title
+		display: flex
+		justify-content: center
+		font-size: 48px
+		font-weight: 700
+
+	&__holder
+		display: grid
+		grid-gap: 10px
+		grid-auto-flow: row
+		justify-items: stretch
+		/* grid-auto-columns: 2fr; */
+		grid-template-columns: repeat(auto-fit, minmax(467px, 1fr))
+		justify-content: center
+		align-items: center
+		grid-row-gap: 70px
+
+	&__holder--small
+		margin: 97px 0
+		display: grid
+		grid-gap: 75px
+		grid-auto-flow: column
+		grid-auto-columns: min-content
+		justify-content: center
+		align-items: center
+
+	&__item
+		align-self: center
+		justify-self: center
+		text-align: center
+
+		&--title
+			font-weight: 400
+			text-transform: uppercase
+			letter-spacing: 0.75px
+			margin: 7px auto 29px
