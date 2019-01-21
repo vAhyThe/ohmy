@@ -10,6 +10,14 @@
       </div>
     </div>
     <page-footer />
+    <div class="Grid Grid--nopadding">
+      <div class="Grid__inner">
+        <div class="Footer__copy">
+          <div class="Footer__copy--left">© Tomáš Váhala 2019</div>
+          <div class="Footer__copy--right">Design by Michal Hosnedl</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

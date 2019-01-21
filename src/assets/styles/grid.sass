@@ -1,23 +1,29 @@
 .Grid
-	padding: 0 15px
 	position: relative
-	width: 100%
+	padding: 0 10px
 
 	&__inner
 		width: 100%
 		margin: 0 auto
+		position: relative
 
 		//2
 		@media only screen and (min-width: 677px)
 			width: 677px
-			padding: 0
-	
+
 
 		//3
 		@media only screen and (min-width: 1032px)
 			width: 1032px
-	
+
 
 		//4
 		@media only screen and (min-width: 1386px)
 			width: 1386px
+
+
+.Grid--nopadding
+	padding: 0
+
+	.Grid__inner
+		padding: 0
