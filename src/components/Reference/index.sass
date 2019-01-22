@@ -19,16 +19,30 @@
 	&__holder--small
 		margin: 97px 0
 		display: grid
-		grid-gap: 75px
-		grid-auto-flow: column
+		grid-gap: 68px
 		grid-auto-columns: min-content
 		justify-content: center
 		align-items: center
+
+		svg
+			justify-self: center
+
+		@media only screen and (min-width: 677px)
+			grid-auto-flow: column
 
 	&__item
 		align-self: center
 		justify-self: center
 		text-align: center
+
+		&--img
+			img
+				max-width: 100%
+				height: auto
+				width: 100vw
+
+				@media only screen and (min-width: 677px)
+					width: auto
 
 		&--title
 			font-weight: 400

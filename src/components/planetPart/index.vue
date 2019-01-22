@@ -5,6 +5,7 @@
 <template>
   <div class="Planet__holder">
     <img-planet />
+    <div class="Planet__holder--item"/>
   </div>
 </template>
 
