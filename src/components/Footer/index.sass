@@ -23,11 +23,14 @@
 
 .Dinosaurus
 	position: absolute
-	bottom: -205px
+	bottom: 113px
+	right: 0
 
 	&__holder
 		animation: moveImage 15s linear infinite
-		left: -350px
+		animation-delay: 15s
+		right: 350px
+		transform: translateX(350px)
 
 
 .dino-celist
@@ -55,28 +58,42 @@
 	animation-delay: 1s
 .Haystack
 	position: absolute
-
-	&__shadow
-		position: relative
-		top: 47px
+	bottom: 113px
+	right: 0
 
 	&__holder
 		animation: moveImage 15s linear infinite
-		left: -350px
+		animation-delay: 13s
+		right: 350px
+		transform: translateX(350px)
+
+	&__shadow
+		animation: shadow 2s linear infinite
+		animation-direction: alternate
+		position: relative
+		top: 47px
 
 	&__ball__holder
-		animation: jumping 2s infinite
+		animation: jumping 2s linear infinite
 		position: relative
 
 	&__ball
 		position: absolute
 		-webkit-animation: rotate 2s infinite linear
 
+@keyframes shadow
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(.8)
+	100%
+		transform: scale(1)
+
 @keyframes rotate
 	from
 		transform: rotate(0deg)
 	to
-		transform: rotate(360deg)
+		transform: rotate(-360deg)
 
 @keyframes rotatecelist
 	from
@@ -109,5 +126,8 @@
 		top: 50px
 
 @keyframes moveImage
+	0%
+		transform: translateX(350px)
+
 	100%
-		transform: translateX(calc(100vw + 350px))
+		transform: translateX(calc(-100vw - 350px))
