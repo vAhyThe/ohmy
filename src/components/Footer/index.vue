@@ -30,6 +30,7 @@ import ImgLogo from './image/image.svg'
 import ImgHaystack from './image/haystack.svg'
 import ImgHaystackShadow from './image/shadow.svg'
 import ImgDino from './image/dino.svg'
+import ImgCar from './image/footer_vozidlo.svg'
 
 export default {
   name: 'Footer',
@@ -38,7 +39,8 @@ export default {
     ImgLogo,
     ImgHaystack,
     ImgHaystackShadow,
-    ImgDino
+    ImgDino,
+    ImgCar
   }
 }
 </script>

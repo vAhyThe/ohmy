@@ -6,7 +6,7 @@
 		position: absolute
 		left: 50%
 		top: 50%
-		-webkit-transform: translateY(-50%) translateX(-50%)
+		transform: translateY(-50%) translateX(-50%)
 
 .Footer__copy
 	color: #943b25
@@ -21,10 +21,40 @@
 	width: calc(100% - 20px)
 	justify-content: space-between
 
+.image-footer--car
+	transform: translateX(74%)translateY(115px)
+
+.image-footer--car-holder
+	animation: moveCar 2s linear infinite
+	animation-direction: alternate
+
+.image-wheel--1
+	transform-origin: 95px 132px
+	animation: rotate2 2s infinite linear
+	animation-direction: alternate
+
+.image-wheel--2
+	transform-origin: 143px 132px
+	animation: rotate2 2s infinite linear
+	animation-direction: alternate
+
+.image-wheel--3
+	transform-origin: 48px 132px
+	animation: rotate2 2s infinite linear
+	animation-direction: alternate
+
+.image-antena
+	animation: rotate3 3s infinite ease-in-out
+	animation-direction: alternate
+	transform-origin: 30px 33px
+
+.image-antena-holder
+	transform: rotate(0deg) translateY(10px)
+
 .Dinosaurus
 	position: absolute
 	bottom: 113px
-	right: 0
+	right: -330px
 
 	&__holder
 		animation: moveImage 15s linear infinite
@@ -81,6 +111,13 @@
 		position: absolute
 		-webkit-animation: rotate 2s infinite linear
 
+@keyframes moveCar
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(20px)
+
+
 @keyframes shadow
 	0%
 		transform: scale(1)
@@ -88,6 +125,18 @@
 		transform: scale(.8)
 	100%
 		transform: scale(1)
+
+@keyframes rotate2
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(45deg)
+
+@keyframes rotate3
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(90deg)
 
 @keyframes rotate
 	from
