@@ -4,6 +4,7 @@
 
 	&__background
 		position: absolute
+		overflow: visible!important
 		left: 50%
 		top: 50%
 		transform: translateY(-50%) translateX(-50%)
@@ -23,6 +24,17 @@
 
 .image-footer--car
 	transform: translateX(74%)translateY(115px)
+
+.image-emiter
+	transform: translateX(250px) translateY(-65px)
+
+.image-emiter--parabola
+	transform-origin: 143px 57px
+	animation: rotate4 4s infinite ease-in-out
+	animation-direction: alternate
+
+.image-astroman
+	transform: translateX(816px) translateY(166px)
 
 .image-footer--car-holder
 	animation: moveCar 2s linear infinite
@@ -137,6 +149,12 @@
 		transform: rotate(0deg)
 	to
 		transform: rotate(90deg)
+
+@keyframes rotate4
+	from
+		transform: rotate(10deg)
+	to
+		transform: rotate(-80deg)
 
 @keyframes rotate
 	from

@@ -3,6 +3,28 @@
 	font-size: 24px
 	line-height: 36px
 	margin-bottom: 540px
+	position: relative
 
 	&__title
 		font-size: 48px
+
+	&__planet
+		position: absolute
+		top: -7px
+		left: 38vw
+
+	&__text
+		z-index: 10
+		position: relative
+
+.planet-flag
+	transform: rotate(0deg)
+	transform-origin: 365px 360px
+	animation: rotateFlag 4s infinite ease-in-out
+	animation-direction: alternate
+
+@keyframes rotateFlag
+	from
+		transform: rotate(-10deg)
+	to
+		transform: rotate(30deg)
